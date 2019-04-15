@@ -1,8 +1,8 @@
 //1. promptで入力した値から「正の数」「負の数」を判定してalertする処理を書いてください。
 var answer = prompt ('正の数か負の数を入力して下さい。');
-if (answer >=0 ) {
+if (answer >= 0 ) {
   alert('正の数');
-} else if (answer <=0) {
+} else if (answer <= 0) {
   alert('負の数');
 //2. 1.で数値以外が入力された場合には「数値を入力してください」とalertする処理を追加してください。
 } else {
@@ -23,7 +23,7 @@ var i = 0;
 var answer = prompt ('パンダ、ライオン、キリンのどれか１つ選んで下さい。');
 if (answer == 'ライオン' ) {
 //5. 4.で中断したときの'ライオン'の添字もalertするように変更してください。
-  alert('ライオン');
+  alert(animal[1] + ' [1] ');
   i + 4;
 } else {
   while (i < animal.length) {
@@ -42,18 +42,18 @@ var animal = [
 //7. 6.でpromptで入力した動物名の体重をalertするように変更してください。
 var answer = prompt ('パンダ、ライオン、キリンのどれか１つ選んで下さい。');
 if (answer == 'パンダ' )  {
-  alert(animal[0].Kg+'Kg');
+  alert(animal[0].Kg + 'weight');
 } else if (answer == 'ライオン' )  {
-  alert(animal[1].Kg+'Kg');
+  alert(animal[1].Kg + 'weight');
 } if (answer == 'キリン' )  {
-  alert(animal[2].Kg+'Kg');
+  alert(animal[2].Kg + 'weight');
 }
 
 //8. 円の半径を入力するとその面積を返す関数をつくり、その結果をalertしましょう。円周率は3.14とします。
 var circle = prompt ('円の半径を入力して下さい。');
 //console.log(circle);
 function calc(x) {
-  return circle * circle * x;
+  return x * x * 3.14;
   //半径×半径×3.14
 }
-alert('円の面積は'  + calc(3.14));
+alert('円の面積は' + calc(circle));
