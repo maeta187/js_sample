@@ -21,39 +21,40 @@ while (i < animal.length) {
 var animal = ['パンダ' , 'ライオン' , 'キリン'];
 var i = 0;
 var answer = prompt ('パンダ、ライオン、キリンのどれか１つ選んで下さい。');
-if (answer == 'ライオン' ) {
-//5. 4.で中断したときの'ライオン'の添字もalertするように変更してください。
-  alert(animal[1] + ' [1] ');
-  i + 4;
-} else {
-  while (i < animal.length) {
-    alert(animal[i]);
-    i++;
-  }
+while (i < animal.length) {
+  if (answer == "ライオン" && answer == animal[i] ) {
+    //5. 4.で中断したときの'ライオン'の添字もalertするように変更してください。
+    alert(animal[i] + ": " + i);
+    break;
+    //i += 4;
+  } //else {
+    //alert("指定された以外の動物です\nループを続けます");
+  //}
+  i++;
 }
 
 //6. オブジェクト変数の配列の形式で、動物と体重を表現してみましょう。例としてパンダは80(Kg)、ライオンは200(Kg)、キリンは300(Kg)としましょう。
 var animal = [
-  {'name': 'パンダ','Kg':80},
-  {'name': 'ライオン','Kg':200},
-  {'name': 'キリン','Kg':300}
+  {'name': 'パンダ','weight':80},
+  {'name': 'ライオン','weight':200},
+  {'name': 'キリン','weight':300}
 ];
 
 //7. 6.でpromptで入力した動物名の体重をalertするように変更してください。
 var answer = prompt ('パンダ、ライオン、キリンのどれか１つ選んで下さい。');
 if (answer == 'パンダ' )  {
-  alert(animal[0].Kg + 'weight');
+  alert(animal[0].weight + 'Kg');
 } else if (answer == 'ライオン' )  {
-  alert(animal[1].Kg + 'weight');
+  alert(animal[1].weight + 'Kg');
 } if (answer == 'キリン' )  {
-  alert(animal[2].Kg + 'weight');
+  alert(animal[2].weight + 'Kg');
 }
 
 //8. 円の半径を入力するとその面積を返す関数をつくり、その結果をalertしましょう。円周率は3.14とします。
-var circle = prompt ('円の半径を入力して下さい。');
+var radius = prompt ('円の半径を入力して下さい。');
 //console.log(circle);
 function calc(x) {
   return x * x * 3.14;
   //半径×半径×3.14
 }
-alert('円の面積は' + calc(circle));
+alert('円の面積は' + calc(radius));
