@@ -39,22 +39,21 @@ var animal = [
   {'name': 'ライオン','weight':200},
   {'name': 'キリン','weight':300}
 ];
-
-//7. 6.でpromptで入力した動物名の体重をalertするように変更してください。
 var answer = prompt ('パンダ、ライオン、キリンのどれか１つ選んで下さい。');
-if (answer == 'パンダ' )  {
-  alert(animal[0].weight + 'Kg');
-} else if (answer == 'ライオン' )  {
-  alert(animal[1].weight + 'Kg');
-} if (answer == 'キリン' )  {
-  alert(animal[2].weight + 'Kg');
+//7. 6.でpromptで入力した動物名の体重をalertするように変更してください。
+var i = 0;
+while (i < animal.length) {
+  if (answer == animal[i].name ) {
+    alert(animal[i].weight + 'Kg');
+  }
+  i++;
 }
 
 //8. 円の半径を入力するとその面積を返す関数をつくり、その結果をalertしましょう。円周率は3.14とします。
-var radius = prompt ('円の半径を入力して下さい。');
 //console.log(circle);
 function calc(x) {
   return x * x * 3.14;
   //半径×半径×3.14
 }
+var radius = prompt ('円の半径を入力して下さい。');
 alert('円の面積は' + calc(radius));
